@@ -15,6 +15,6 @@ function demo_wp_view_shortcode( $args ){
 	);
 	$args = shortcode_atts( $defaults, $args, 'demo_wp_view' );
 
-	return sprintf( '<div class="demo_wp_view">%s</div>', esc_html( wp_kses( $args['content'], array() ) ) );
+	return sprintf( '<div class="demo_wp_view" style="background: #f00;">%s</div>', esc_html( wp_kses( $args['content'], array() ) ) );
 }
 add_shortcode( 'demo_wp_view', 'demo_wp_view_shortcode' );
